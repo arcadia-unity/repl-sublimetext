@@ -18,12 +18,12 @@
                         "encoding": "utf8",
                         "cmd": [
                             "ruby",
-                            "${packages}/SublimeREPL/config/Clojure/Unity/client.rb",
+                            "${packages}/SublimeREPL/config/Clojure/Unity/repl.rb",
                             "$editor"
                         ],
                         "cwd": "$file_path",
                         "syntax": "Packages/Clojure/Clojure.tmLanguage",
-                        "external_id": "clojure"
+                        "external_id": "clojureunity"
                         }
                     }]
                 }

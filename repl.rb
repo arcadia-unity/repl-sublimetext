@@ -30,7 +30,7 @@ while true
   
   $input += $stdin.gets
 
-  if balanced?($input)
+  if not $input.strip.empty? and balanced?($input)
     $s.write $input
     repl_print
   else
