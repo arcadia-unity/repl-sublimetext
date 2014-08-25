@@ -3,10 +3,8 @@ repl-sublimetext
 
 SublimeREPL Package for Clojure Unity
 
-
 Installation
 ------------
-
 1. Install SublimeREPL
 
 ```
@@ -26,6 +24,26 @@ If you're on Sublime Text 3
 $ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/SublimeREPL/config/Clojure/
 $ git clone https://github.com/clojure-unity/repl-sublimetext.git Unity
 ```
+
+
+Usage
+-----
+1. Set the syntax of your file to Clojure (Unity)
+
+```
+Tools > Command Palette... > Install Packages > Set Syntax: Clojure (Unity)
+```
+
+2. Launch the REPL
+
+```
+Tools > SublimeREPL > Clojure > Unity
+```
+
+3. Use it as you would any other SublimeREPL language
+
+Read [the documentation](http://sublimerepl.readthedocs.org/en/latest/) for more, but ignore their Clojure notes. They do not apply here.
+
 
 Legal
 -----
