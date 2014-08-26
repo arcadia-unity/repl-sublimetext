@@ -5,13 +5,13 @@ SublimeREPL Package for Clojure Unity
 
 Installation
 ------------
-1. Install SublimeREPL
+### Install SublimeREPL
 
 ```
 Tools > Command Palette... > Install Packages > SublimeREPL
 ```
 
-2. Install Clojure Unity support
+### Install Clojure Unity support
 
 ```bash
 $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/SublimeREPL/config/Clojure/
@@ -28,19 +28,19 @@ $ git clone https://github.com/clojure-unity/repl-sublimetext.git Unity
 
 Usage
 -----
-1. Set the syntax of your file to Clojure (Unity)
+### Set the syntax of your file to Clojure (Unity)
 
 ```
 Tools > Command Palette... > Install Packages > Set Syntax: Clojure (Unity)
 ```
 
-2. Launch the REPL
+### Launch the REPL
 
 ```
 Tools > SublimeREPL > Clojure > Unity
 ```
 
-3. Use it as you would any other SublimeREPL language
+### Use it as you would any other SublimeREPL language
 
 Read [the documentation](http://sublimerepl.readthedocs.org/en/latest/) for more, but ignore their Clojure notes. They do not apply here.
 
