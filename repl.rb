@@ -28,7 +28,7 @@ while true
     $stdout.flush
   end
   
-  $input += $stdin.gets
+  $input += $stdin.gets.encode('utf-8', 'utf-8')
 
   if not $input.strip.empty? and balanced?($input)
     $s.write $input
