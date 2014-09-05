@@ -1,40 +1,32 @@
-require "socket"
 require "io/wait"
+require "socket"
 
-$s = TCPSocket.new "localhost", 11211
 $input = ""
+$input.force_encoding("UTF-8")
+$s = UDPSocket.new
 
-def balanced? str
-  s = str.clone
+def repl_send code, strip_nil=false
+  $s.send code, 0, "localhost", 11211
+  $s.wait
+  out = $s.recv($s.nread)
+  print strip_nil ? out.gsub(/\s*nil$/, "\n") : out
+  $stdout.flush
+end
+
+def balanced? code
+  s = code.clone
   s.gsub! /[^\(\)\[\]\{\}]/, ""
   until s.gsub!(/\(\)|\[\]|\{\}/, "").nil?; end
   s.empty?
 end
 
-def repl_print strip_nil=false
-  $s.wait
-  out = $s.recv($s.nread)
-  puts strip_nil ? out.gsub(/\s*nil$/, "\n\n") : out
-  $prompt = "--> "
-  $input = ""
-end
-
-$s.write DATA.read.strip
-repl_print true
+repl_send DATA.read.strip, true
 
 while true
-  if $prompt
-    print $prompt 
-    $stdout.flush
-  end
-  
-  $input += $stdin.gets.encode('utf-8', 'utf-8')
-
-  if not $input.strip.empty? and balanced?($input)
-    $s.write $input
-    repl_print
-  else
-    $prompt = false
+  $input += $stdin.gets.force_encoding("UTF-8")
+  if balanced? $input
+    repl_send $input
+    $input = ""
   end
 end
 
