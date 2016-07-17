@@ -18,8 +18,7 @@
                         "encoding": "utf8",
                         "cmd": [
                             "node",
-                            "${packages}/SublimeREPL/config/Clojure/Unity/repl.js",
-                            "$editor"
+                            "${packages}/SublimeREPL/config/Clojure/Unity/repl.js"
                         ],
                         "cwd": "$file_path",
                         "syntax": "Packages/Clojure/Clojure.tmLanguage",
