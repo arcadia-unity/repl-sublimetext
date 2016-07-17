@@ -17,8 +17,8 @@
                         "type": "subprocess",
                         "encoding": "utf8",
                         "cmd": [
-                            "ruby",
-                            "${packages}/SublimeREPL/config/Clojure/Unity/repl.rb",
+                            "node",
+                            "${packages}/SublimeREPL/config/Clojure/Unity/repl.js",
                             "$editor"
                         ],
                         "cwd": "$file_path",
