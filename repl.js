@@ -12,7 +12,7 @@ const arcadiaHost = process.argv[3] || "localhost";
 
 var input = "";
 
-rl.on('line', (cmd) => {
+rl.on('line', function(cmd) {
   // always grow input
   input += cmd + "\n";
   if(parenthesesAreBalanced(input)) {
@@ -25,11 +25,11 @@ rl.on('line', (cmd) => {
   }
 });
 
-rl.on('close', () => {
+rl.on('close', function() {
   process.exit(0);
 });
 
-server.on('message', (msg, rinfo) => {
+server.on('message', function(msg, rinfo) {
   var msg = msg.toString();
   var msgLines = msg.split("\n");
   
