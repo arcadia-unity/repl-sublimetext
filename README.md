@@ -28,11 +28,19 @@ $ git clone https://github.com/clojure-unity/repl-sublimetext.git Unity
 
 Usage
 -----
+### Install SetSyntax
+
+```
+Tools > Command Palette... > Install Packages > SetSyntax
+```
+
+
 ### Set the syntax of your file to Clojure (Unity)
 
 ```
-Tools > Command Palette... > Install Packages > Set Syntax: Clojure (Unity)
+Tools > Command Palette... > Set Syntax: Clojure (Unity)
 ```
+
 
 ### Launch the REPL
 
